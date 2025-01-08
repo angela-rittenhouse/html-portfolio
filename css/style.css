@@ -1,0 +1,542 @@
+/* 
+
+--- 01 TYPOGRAPHY SYSTEM
+- Font size (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights:
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+
+- Line heights:
+Default: 1
+Small1.05
+Paragraph default: 1.5
+
+
+
+
+--- 02 COLORS
+https://samanthadigital.com/nature-color-palette-ideas/
+- Primary: #6A8A73 #202024 #14517B #F8F1E9 #D3BDA9
+- Tints: #e1e8e3
+- Shades: #556e5c
+- Accents:
+- Greys
+#555
+#333
+
+--- 05 SHADOWS
+
+
+--- 06 BORDER-RADIUS
+Default: 9px
+
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+      
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "inter", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+/*****************************/
+/* GENERAL REUSABLE COMPONENTS */
+/*****************************/
+
+/* 1140px or 1200px */
+
+/* .container {
+  display: grid;
+  max-width: 120rem;
+   padding: 0 3.2rem; 
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}   */
+
+.heading-primary {
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #333;
+  letter-spacing: -0.5px;
+  margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+  font-size: 4.4rem;
+  font-weight: 600;
+  line-height: 1.05;
+  color: #333;
+  letter-spacing: -0.5px;
+}
+
+.center-title {
+  text-align: center;
+  color: #fff;
+}
+
+/* .header {
+  position: fixed;
+  top: 0;
+} */
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+
+  /* Put transition on original "state" */
+  transition: background-color 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+  background-color: #6a8a73;
+  color: #fff;
+}
+
+.btn--full:hover,
+.btn--full:active {
+  background-color: #556e5c;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  background-color: #e1e8e3;
+
+  /* Trick to add border inside */
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+
+.margin-center {
+  margin: 0 auto;
+}
+
+/*****************************/
+/* HEADER */
+/*****************************/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f4ed;
+  /* background-color: #e1e8e3; */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+
+/*****************************/
+/* NAVIGATION */
+/*****************************/
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #556e5c;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  background-color: #6a8a73;
+  border-radius: 9px;
+  color: #fff;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #556e5c;
+}
+
+/* STICKY NAVIGATION */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  z-index: 999;
+}
+
+/*****************************/
+/* HERO SECTION */
+/*****************************/
+
+.section-hero {
+  background-color: #e1e8e3;
+  padding: 9.8rem 0 9.6rem 0;
+}
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  align-items: center;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 4.8rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+/* Testimonials section*/
+.delivered-meals {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-top: 8.2rem;
+}
+
+.delivered-imgs {
+  display: flex;
+}
+
+.delivered-imgs img {
+  height: 4.8rem;
+  width: 4.8rem;
+  border-radius: 50%;
+  margin-right: -1.4rem;
+  border: 3px solid #e1e8e3;
+}
+
+.delivered-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.delivered-text span {
+  color: #556e5c;
+  font-weight: 700;
+}
+
+/*****************************/
+/* SPECIAL FOOD SECTION */
+/*****************************/
+
+#section-special-food {
+  background-color: #14517b;
+  padding: 4.8rem 0 0 0;
+}
+
+.food-img {
+  /* height: 200px; */
+  width: 100%;
+}
+
+.special-food-container {
+  height: 52rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+
+.short-desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container-img {
+  /* text-align: justify; */
+  width: 200px;
+  height: 250px;
+}
+
+.container-img img {
+  display: block;
+  margin: 0 auto;
+}
+
+.container-img img {
+  cursor: zoom-in;
+  transition: transform 2s ease;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ label > img {
+  transform: scale(1.5);
+  cursor: zoom-out;
+  border: 10px solid #a1b9ca;
+}
+
+.container-img:nth-child(3) {
+  text-align: center;
+  background-color: #0c314a;
+}
+
+.short-desc,
+p {
+  padding: 4px;
+  /* font-size: 1.1rem; */
+}
+
+.long-description {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  color: #fff;
+  width: 50%;
+  line-height: 1.5em;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+.our-selection {
+  width: 250px;
+  background: #0a293e;
+  border-radius: 20px;
+  color: #fff;
+  margin: 0 auto;
+}
+
+/*****************************/
+/* SPECIAL PACKAGE SECTION */
+/*****************************/
+
+#section-special-package {
+  padding: 6.8rem 0 9.6rem 0;
+  background-color: #e9ded4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  position: relative;
+  width: 650px;
+  min-height: 400px;
+  overflow: hidden;
+  background-color: #d7c4b2;
+  border-radius: 10px;
+}
+
+.slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.slider .slide.active {
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+}
+
+.slider .slide img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.prev-btn,
+.next-btn {
+  z-index: 999;
+  font-size: 2em;
+  color: #222;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev-btn {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.next-btn {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.slider:hover .navigation {
+  opacity: 1;
+}
+
+.navigation-visibility {
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-visibility .slide-icon {
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.5);
+  width: 20px;
+  height: 10px;
+  transform: translateY(-50px);
+  margin: 0 6px;
+  border-radius: 2px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+
+.navigation-visibility .slide-icon.active {
+  background: #948476;
+}
+
+.special img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+/*****************************/
+/* ABOUT US PAGE*/
+/*****************************/
+
+.about-us {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+.about-us > p {
+  margin-bottom: 15px;
+}
+
+.about {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+}
+
+.about-main {
+  height: 100vh;
+  background-color: #e1e8e3;
+}
+
+.text {
+  font-size: 24px;
+  width: 350px;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+/*****************************/
+/* MENU PAGE */
+/*****************************/
+
+.menus {
+  text-align: center;
+  padding: 50px;
+  height: 100vh;
+}
+
+/*****************************/
+/* FOOTER */
+/*****************************/
+
+.footer {
+  background-color: #e1e8e3;
+  padding: 2rem 0 0 0;
+}
+
+.grid--2-cols {
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.social-link {
+  display: flex;
+}
+
+.logos {
+  margin-right: 5px;
+}
